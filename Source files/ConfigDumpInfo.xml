@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.13">
+	<ConfigVersions>
+		<Metadata name="Configuration.Конфигурация" id="5f954e35-3836-43a7-a82d-65c6de3a838a" configVersion="15a3abb42b614f4b94d445ad2509ff8400000000"/>
+		<Metadata name="DataProcessor.SDK_Todoist" id="9298b4b8-4559-40d8-95ee-491a07990e82" configVersion="7264a6dd23754744bd15c3db8484526600000000">
+			<Metadata name="DataProcessor.SDK_Todoist.Attribute.Токен" id="275e6e90-62fd-46a3-ac2a-6183f0ba4cb3"/>
+		</Metadata>
+		<Metadata name="DataProcessor.SDK_Todoist.Form.Форма" id="56348450-0240-46a2-8ef9-0e9b77d3a19d" configVersion="d892aee8be33a949b2d978dbcfd55c2400000000"/>
+		<Metadata name="DataProcessor.SDK_Todoist.Form.Форма.Form" id="56348450-0240-46a2-8ef9-0e9b77d3a19d.0" configVersion="4b18d78eb064e14496cfdfeaf7badcd600000000"/>
+		<Metadata name="Language.Русский" id="7e838126-0059-4f2b-a8ed-8807cb864c26" configVersion="9819b584fdf2dc4d859ff0b426951e9900000000"/>
+	</ConfigVersions>
+</ConfigDumpInfo>
