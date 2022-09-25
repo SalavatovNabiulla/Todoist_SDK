@@ -210,6 +210,7 @@
 		</Properties>
 		<ChildObjects>
 			<Language>Русский</Language>
+			<CommonModule>Todoist_Клиент</CommonModule>
 			<DataProcessor>SDK_Todoist</DataProcessor>
 		</ChildObjects>
 	</Configuration>
