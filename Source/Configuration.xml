@@ -44,7 +44,7 @@
 			<ScriptVariant>Russian</ScriptVariant>
 			<DefaultRoles/>
 			<Vendor/>
-			<Version/>
+			<Version>1.0</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -211,6 +211,8 @@
 		<ChildObjects>
 			<Language>Русский</Language>
 			<CommonModule>Todoist_Клиент</CommonModule>
+			<CommonModule>Todoist_Сервер</CommonModule>
+			<CommonForm>Todoist_ФормаТестирования</CommonForm>
 			<DataProcessor>SDK_Todoist</DataProcessor>
 		</ChildObjects>
 	</Configuration>
