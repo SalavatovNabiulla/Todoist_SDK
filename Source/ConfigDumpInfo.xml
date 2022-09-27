@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.13">
 	<ConfigVersions>
-		<Metadata name="CommonForm.Todoist_ФормаТестирования" id="d2f02d3e-5dd0-4c7d-8bef-14dcfe2b832f" configVersion="9448f028f885044dbe2f040342c5e77d00000000"/>
-		<Metadata name="CommonForm.Todoist_ФормаТестирования.Form" id="d2f02d3e-5dd0-4c7d-8bef-14dcfe2b832f.0" configVersion="3b2a410eae4d2d46b9ff191200e5972a00000000"/>
-		<Metadata name="CommonModule.Todoist_Клиент" id="82cc4f70-0fe0-4ec5-af23-027e3561742a" configVersion="72f30f59739068448fd4fde743a7c71700000000"/>
-		<Metadata name="CommonModule.Todoist_Клиент.Module" id="82cc4f70-0fe0-4ec5-af23-027e3561742a.0" configVersion="fc79d786e1346045a194de2cf938aa9d00000000"/>
-		<Metadata name="CommonModule.Todoist_Сервер" id="606630cb-344d-4665-8f53-20bc3a597094" configVersion="c1da68f417cab54fba8946993aabc3d400000000"/>
-		<Metadata name="CommonModule.Todoist_Сервер.Module" id="606630cb-344d-4665-8f53-20bc3a597094.0" configVersion="882af5235b94864c8327ede09c9f678200000000"/>
-		<Metadata name="Configuration.Конфигурация" id="5f954e35-3836-43a7-a82d-65c6de3a838a" configVersion="6612114a8d65de46941a4b4f61e8500300000000"/>
-		<Metadata name="Configuration.Конфигурация.HomePageWorkArea" id="d576d3e1-54e6-45b7-9fc6-2b2b550a40e1.8" configVersion="6c74abd2a6638a41bc57bd96fc63fddd00000000"/>
-		<Metadata name="DataProcessor.SDK_Todoist" id="9298b4b8-4559-40d8-95ee-491a07990e82" configVersion="47c7f75d0ee9494fbd49118d38fd0b4b00000000">
+		<Metadata name="CommonForm.Todoist_ФормаТестирования" id="d2f02d3e-5dd0-4c7d-8bef-14dcfe2b832f" configVersion="ff8312091d50af42994fdaf37d5067b300000000"/>
+		<Metadata name="CommonForm.Todoist_ФормаТестирования.Form" id="d2f02d3e-5dd0-4c7d-8bef-14dcfe2b832f.0" configVersion="a013de887a7cf74a8ca328183181672500000000"/>
+		<Metadata name="CommonModule.Todoist_Клиент" id="82cc4f70-0fe0-4ec5-af23-027e3561742a" configVersion="44f292a10e18bd48a4a4c7e7eea4a5fe00000000"/>
+		<Metadata name="CommonModule.Todoist_Клиент.Module" id="82cc4f70-0fe0-4ec5-af23-027e3561742a.0" configVersion="242fcc327624964182484f29d62f0b0500000000"/>
+		<Metadata name="CommonModule.Todoist_Сервер" id="606630cb-344d-4665-8f53-20bc3a597094" configVersion="ca127a347bd7224d9f600bb7639e983800000000"/>
+		<Metadata name="CommonModule.Todoist_Сервер.Module" id="606630cb-344d-4665-8f53-20bc3a597094.0" configVersion="649970d10d3d16418ec985afbbc9469a00000000"/>
+		<Metadata name="Configuration.Конфигурация" id="5f954e35-3836-43a7-a82d-65c6de3a838a" configVersion="0782c74025b5fc4b8b1f5f5d562dc59200000000"/>
+		<Metadata name="Configuration.Конфигурация.HomePageWorkArea" id="d576d3e1-54e6-45b7-9fc6-2b2b550a40e1.8" configVersion="1ebc5f7a06ebd244840a82b6c341112700000000"/>
+		<Metadata name="DataProcessor.SDK_Todoist" id="9298b4b8-4559-40d8-95ee-491a07990e82" configVersion="d4d3cacb9508b146beb66d8d3b08e9ab00000000">
 			<Metadata name="DataProcessor.SDK_Todoist.Attribute.Токен" id="275e6e90-62fd-46a3-ac2a-6183f0ba4cb3"/>
 		</Metadata>
-		<Metadata name="DataProcessor.SDK_Todoist.Form.Форма" id="56348450-0240-46a2-8ef9-0e9b77d3a19d" configVersion="369eed1ec836f4419a4c8433f82746dd00000000"/>
-		<Metadata name="DataProcessor.SDK_Todoist.Form.Форма.Form" id="56348450-0240-46a2-8ef9-0e9b77d3a19d.0" configVersion="78398b4b64f0344eadaf10de4efd0e8b00000000"/>
-		<Metadata name="Language.Русский" id="7e838126-0059-4f2b-a8ed-8807cb864c26" configVersion="36fbb08d4916cc41825b1cb2b126cb8800000000"/>
+		<Metadata name="DataProcessor.SDK_Todoist.Form.Форма" id="56348450-0240-46a2-8ef9-0e9b77d3a19d" configVersion="e9d08665af6b3543a04033cbceddba9200000000"/>
+		<Metadata name="DataProcessor.SDK_Todoist.Form.Форма.Form" id="56348450-0240-46a2-8ef9-0e9b77d3a19d.0" configVersion="305e418050f9a24383da2a71888b4bff00000000"/>
+		<Metadata name="Language.Русский" id="7e838126-0059-4f2b-a8ed-8807cb864c26" configVersion="7f0419b0625c324aa22029fcfb6608ee00000000"/>
 	</ConfigVersions>
 </ConfigDumpInfo>
