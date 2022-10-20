@@ -1,19 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.13">
 	<ConfigVersions>
-		<Metadata name="CommonForm.Todoist_ФормаТестирования" id="d2f02d3e-5dd0-4c7d-8bef-14dcfe2b832f" configVersion="ff8312091d50af42994fdaf37d5067b300000000"/>
-		<Metadata name="CommonForm.Todoist_ФормаТестирования.Form" id="d2f02d3e-5dd0-4c7d-8bef-14dcfe2b832f.0" configVersion="a013de887a7cf74a8ca328183181672500000000"/>
-		<Metadata name="CommonModule.Todoist_Клиент" id="82cc4f70-0fe0-4ec5-af23-027e3561742a" configVersion="ee4f60e96703c64b8eab977d4a57778c00000000"/>
-		<Metadata name="CommonModule.Todoist_Клиент.Module" id="82cc4f70-0fe0-4ec5-af23-027e3561742a.0" configVersion="74d0c4a48ca52f4d83e19d9face28ffb00000000"/>
-		<Metadata name="CommonModule.Todoist_Сервер" id="606630cb-344d-4665-8f53-20bc3a597094" configVersion="ca127a347bd7224d9f600bb7639e983800000000"/>
-		<Metadata name="CommonModule.Todoist_Сервер.Module" id="606630cb-344d-4665-8f53-20bc3a597094.0" configVersion="649970d10d3d16418ec985afbbc9469a00000000"/>
-		<Metadata name="Configuration.Конфигурация" id="5f954e35-3836-43a7-a82d-65c6de3a838a" configVersion="2ef60a7b80fd7048b04ca29c0f45ca8e00000000"/>
-		<Metadata name="Configuration.Конфигурация.HomePageWorkArea" id="d576d3e1-54e6-45b7-9fc6-2b2b550a40e1.8" configVersion="1ebc5f7a06ebd244840a82b6c341112700000000"/>
-		<Metadata name="DataProcessor.SDK_Todoist" id="9298b4b8-4559-40d8-95ee-491a07990e82" configVersion="d4d3cacb9508b146beb66d8d3b08e9ab00000000">
-			<Metadata name="DataProcessor.SDK_Todoist.Attribute.Токен" id="275e6e90-62fd-46a3-ac2a-6183f0ba4cb3"/>
-		</Metadata>
-		<Metadata name="DataProcessor.SDK_Todoist.Form.Форма" id="56348450-0240-46a2-8ef9-0e9b77d3a19d" configVersion="e9d08665af6b3543a04033cbceddba9200000000"/>
-		<Metadata name="DataProcessor.SDK_Todoist.Form.Форма.Form" id="56348450-0240-46a2-8ef9-0e9b77d3a19d.0" configVersion="305e418050f9a24383da2a71888b4bff00000000"/>
-		<Metadata name="Language.Русский" id="7e838126-0059-4f2b-a8ed-8807cb864c26" configVersion="7f0419b0625c324aa22029fcfb6608ee00000000"/>
+		<Metadata name="CommonForm.Todoist_ФормаТестирования" id="d2f02d3e-5dd0-4c7d-8bef-14dcfe2b832f" configVersion="74d70df0da8ffe4c91917b64295edc1c00000000"/>
+		<Metadata name="CommonForm.Todoist_ФормаТестирования.Form" id="d2f02d3e-5dd0-4c7d-8bef-14dcfe2b832f.0" configVersion="ebfe078b17c85b44a87511e965db953500000000"/>
+		<Metadata name="CommonModule.Todoist_Клиент" id="82cc4f70-0fe0-4ec5-af23-027e3561742a" configVersion="945392fcfe387a41a5ee436b7e5c2ea000000000"/>
+		<Metadata name="CommonModule.Todoist_Клиент.Module" id="82cc4f70-0fe0-4ec5-af23-027e3561742a.0" configVersion="4525351a4092ee4fadbb604e012cd17a00000000"/>
+		<Metadata name="CommonModule.Todoist_Сервер" id="606630cb-344d-4665-8f53-20bc3a597094" configVersion="5ece5e196852e546902f71d15146d77300000000"/>
+		<Metadata name="CommonModule.Todoist_Сервер.Module" id="606630cb-344d-4665-8f53-20bc3a597094.0" configVersion="6ad385dc5335384d91cba44c64ff65a500000000"/>
+		<Metadata name="Configuration.Конфигурация" id="5f954e35-3836-43a7-a82d-65c6de3a838a" configVersion="f64562c7d14edd429698570e662a879900000000"/>
+		<Metadata name="Configuration.Конфигурация.HomePageWorkArea" id="d576d3e1-54e6-45b7-9fc6-2b2b550a40e1.8" configVersion="1d3de8dd50569b4680a43428e34cec7b00000000"/>
+		<Metadata name="Language.Русский" id="7e838126-0059-4f2b-a8ed-8807cb864c26" configVersion="cd7edd8625e93946b0a0626abfc88c8000000000"/>
 	</ConfigVersions>
 </ConfigDumpInfo>

@@ -213,7 +213,6 @@
 			<CommonModule>Todoist_Клиент</CommonModule>
 			<CommonModule>Todoist_Сервер</CommonModule>
 			<CommonForm>Todoist_ФормаТестирования</CommonForm>
-			<DataProcessor>SDK_Todoist</DataProcessor>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>
