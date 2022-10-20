@@ -1,15 +1,323 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<ChildItems>
-			<Button name="ФормаКоманда1" id="1">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.Команда1</CommandName>
-				<ExtendedTooltip name="ФормаКоманда1РасширеннаяПодсказка" id="2"/>
-			</Button>
-		</ChildItems>
-	</AutoCommandBar>
-	<Attributes/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<Table name="СписокПроектов" id="1">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>СписокПроектов</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СписокПроектовКонтекстноеМеню" id="2">
+				<Autofill>false</Autofill>
+			</ContextMenu>
+			<AutoCommandBar name="СписокПроектовКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокПроектовРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="СписокПроектовСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>СписокПроектов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокПроектовСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="СписокПроектовСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокПроектовСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>СписокПроектов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокПроектовСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="СписокПроектовСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокПроектовУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>СписокПроектов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокПроектовУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="СписокПроектовУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeDeleteRow">СписокПроектовПередУдалением</Event>
+				<Event name="OnActivateRow">СписокПроектовПриАктивизацииСтроки</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="СписокПроектовИдентификатор" id="14">
+					<DataPath>СписокПроектов.Идентификатор</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокПроектовИдентификаторКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="СписокПроектовИдентификаторРасширеннаяПодсказка" id="16"/>
+				</InputField>
+				<InputField name="СписокПроектовНазвание" id="17">
+					<DataPath>СписокПроектов.Название</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокПроектовНазваниеКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="СписокПроектовНазваниеРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="СписокПроектовКоличествоКомментариев" id="20">
+					<DataPath>СписокПроектов.КоличествоКомментариев</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокПроектовКоличествоКомментариевКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="СписокПроектовКоличествоКомментариевРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="СписокПроектовПорядковыйНомер" id="23">
+					<DataPath>СписокПроектов.ПорядковыйНомер</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокПроектовПорядковыйНомерКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="СписокПроектовПорядковыйНомерРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="СписокПроектовЦвет" id="26">
+					<DataPath>СписокПроектов.Цвет</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокПроектовЦветКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="СписокПроектовЦветРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="СписокПроектовОбщий" id="29">
+					<DataPath>СписокПроектов.Общий</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокПроектовОбщийКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="СписокПроектовОбщийРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="СписокПроектовИзбранное" id="32">
+					<DataPath>СписокПроектов.Избранное</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокПроектовИзбранноеКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="СписокПроектовИзбранноеРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<InputField name="СписокПроектовВходящие" id="35">
+					<DataPath>СписокПроектов.Входящие</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокПроектовВходящиеКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="СписокПроектовВходящиеРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="СписокПроектовВходящиеКоманды" id="38">
+					<DataPath>СписокПроектов.ВходящиеКоманды</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокПроектовВходящиеКомандыКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="СписокПроектовВходящиеКомандыРасширеннаяПодсказка" id="40"/>
+				</InputField>
+				<InputField name="СписокПроектовСпособОтображения" id="41">
+					<DataPath>СписокПроектов.СпособОтображения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокПроектовСпособОтображенияКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="СписокПроектовСпособОтображенияРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="СписокПроектовСсылка" id="44">
+					<DataPath>СписокПроектов.Ссылка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокПроектовСсылкаКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="СписокПроектовСсылкаРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<InputField name="СписокПроектовИдентификаторРодителя" id="47">
+					<DataPath>СписокПроектов.ИдентификаторРодителя</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокПроектовИдентификаторРодителяКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="СписокПроектовИдентификаторРодителяРасширеннаяПодсказка" id="49"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СписокПроектов" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список проектов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Идентификатор" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Название" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Название</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КоличествоКомментариев" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество комментариев</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПорядковыйНомер" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Порядковый номер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Цвет" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цвет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Общий" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общий</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Избранное" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Избранное</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Входящие" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Входящие</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВходящиеКоманды" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Входящие команды</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СпособОтображения" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Способ отображения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Ссылка" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторРодителя" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор родителя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
 	<Commands>
 		<Command name="Команда1" id="1">
 			<Action>Команда1</Action>
