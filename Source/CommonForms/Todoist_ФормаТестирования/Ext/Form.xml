@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Group>AlwaysHorizontal</Group>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
 	</Events>
@@ -30,6 +33,23 @@
 					<RowFilter xsi:nil="true"/>
 					<ContextMenu name="СписокПроектовКонтекстноеМеню" id="2">
 						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="СписокПроектовКонтекстноеМенюСоздатьПроект" id="172">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.СоздатьПроект</CommandName>
+								<ExtendedTooltip name="СписокПроектовКонтекстноеМенюСоздатьПроектРасширеннаяПодсказка" id="173"/>
+							</Button>
+							<Button name="СписокПроектовКонтекстноеМенюУдалитьПроект" id="174">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.УдалитьПроект</CommandName>
+								<ExtendedTooltip name="СписокПроектовКонтекстноеМенюУдалитьПроектРасширеннаяПодсказка" id="175"/>
+							</Button>
+							<Button name="СписокПроектовКонтекстноеМенюПереименоватьПроект" id="176">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ПереименоватьПроект</CommandName>
+								<ExtendedTooltip name="СписокПроектовКонтекстноеМенюПереименоватьПроектРасширеннаяПодсказка" id="177"/>
+							</Button>
+						</ChildItems>
 					</ContextMenu>
 					<AutoCommandBar name="СписокПроектовКоманднаяПанель" id="3">
 						<Autofill>false</Autofill>
@@ -119,7 +139,7 @@
 							<ExtendedTooltip name="СписокПроектовВходящиеКомандыРасширеннаяПодсказка" id="40"/>
 						</InputField>
 						<InputField name="СписокПроектовСпособОтображения" id="41">
-							<DataPath>СписокПроектов.СпособОтображения</DataPath>
+							<DataPath>СписокПроектов.СпособОтображенияДоска</DataPath>
 							<EditMode>EnterOnInput</EditMode>
 							<ContextMenu name="СписокПроектовСпособОтображенияКонтекстноеМеню" id="42"/>
 							<ExtendedTooltip name="СписокПроектовСпособОтображенияРасширеннаяПодсказка" id="43"/>
@@ -138,6 +158,135 @@
 						</InputField>
 					</ChildItems>
 				</Table>
+				<UsualGroup name="ГруппаКомментарииПроекта" id="180">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарии проекта</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа комментарии проекта</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаКомментарииПроектаРасширеннаяПодсказка" id="181"/>
+					<ChildItems>
+						<Table name="СписокКомментариевПроекта" id="182">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>СписокКомментариевПроекта</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СписокКомментариевПроектаКонтекстноеМеню" id="183">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="СписокКомментариевПроектаКонтекстноеМенюСоздатьКомментарийПроекта" id="228">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СоздатьКомментарийПроекта</CommandName>
+										<ExtendedTooltip name="СписокКомментариевПроектаКонтекстноеМенюСоздатьКомментарийПроектаРасширеннаяПодсказка" id="229"/>
+									</Button>
+									<Button name="СписокКомментариевПроектаКонтекстноеМенюИзменитьКомментарийПроекта" id="232">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ИзменитьКомментарийПроекта</CommandName>
+										<ExtendedTooltip name="СписокКомментариевПроектаКонтекстноеМенюИзменитьКомментарийПроектаРасширеннаяПодсказка" id="233"/>
+									</Button>
+									<Button name="СписокКомментариевПроектаКонтекстноеМенюУдалитьКомментарийПроекта" id="234">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УдалитьКомментарийПроекта</CommandName>
+										<ExtendedTooltip name="СписокКомментариевПроектаКонтекстноеМенюУдалитьКомментарийПроектаРасширеннаяПодсказка" id="235"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="СписокКомментариевПроектаКоманднаяПанель" id="184">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокКомментариевПроектаРасширеннаяПодсказка" id="185"/>
+							<SearchStringAddition name="СписокКомментариевПроектаСтрокаПоиска" id="186">
+								<AdditionSource>
+									<Item>СписокКомментариевПроекта</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокКомментариевПроектаСтрокаПоискаКонтекстноеМеню" id="187"/>
+								<ExtendedTooltip name="СписокКомментариевПроектаСтрокаПоискаРасширеннаяПодсказка" id="188"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокКомментариевПроектаСостояниеПросмотра" id="189">
+								<AdditionSource>
+									<Item>СписокКомментариевПроекта</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокКомментариевПроектаСостояниеПросмотраКонтекстноеМеню" id="190"/>
+								<ExtendedTooltip name="СписокКомментариевПроектаСостояниеПросмотраРасширеннаяПодсказка" id="191"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокКомментариевПроектаУправлениеПоиском" id="192">
+								<AdditionSource>
+									<Item>СписокКомментариевПроекта</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокКомментариевПроектаУправлениеПоискомКонтекстноеМеню" id="193"/>
+								<ExtendedTooltip name="СписокКомментариевПроектаУправлениеПоискомРасширеннаяПодсказка" id="194"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="СписокКомментариевПроектаСодержание" id="195">
+									<DataPath>СписокКомментариевПроекта.Содержание</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКомментариевПроектаСодержаниеКонтекстноеМеню" id="196"/>
+									<ExtendedTooltip name="СписокКомментариевПроектаСодержаниеРасширеннаяПодсказка" id="197"/>
+								</InputField>
+								<InputField name="СписокКомментариевПроектаИдентификатор" id="198">
+									<DataPath>СписокКомментариевПроекта.Идентификатор</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКомментариевПроектаИдентификаторКонтекстноеМеню" id="199"/>
+									<ExtendedTooltip name="СписокКомментариевПроектаИдентификаторРасширеннаяПодсказка" id="200"/>
+								</InputField>
+								<InputField name="СписокКомментариевПроектаДатаВремяСоздания" id="201">
+									<DataPath>СписокКомментариевПроекта.ДатаВремяСоздания</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКомментариевПроектаДатаВремяСозданияКонтекстноеМеню" id="202"/>
+									<ExtendedTooltip name="СписокКомментариевПроектаДатаВремяСозданияРасширеннаяПодсказка" id="203"/>
+								</InputField>
+								<InputField name="СписокКомментариевПроектаИдентификаторПроекта" id="204">
+									<DataPath>СписокКомментариевПроекта.ИдентификаторПроекта</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКомментариевПроектаИдентификаторПроектаКонтекстноеМеню" id="205"/>
+									<ExtendedTooltip name="СписокКомментариевПроектаИдентификаторПроектаРасширеннаяПодсказка" id="206"/>
+								</InputField>
+								<InputField name="СписокКомментариевПроектаИдентификаторЗадачи" id="207">
+									<DataPath>СписокКомментариевПроекта.ИдентификаторЗадачи</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКомментариевПроектаИдентификаторЗадачиКонтекстноеМеню" id="208"/>
+									<ExtendedTooltip name="СписокКомментариевПроектаИдентификаторЗадачиРасширеннаяПодсказка" id="209"/>
+								</InputField>
+								<InputField name="СписокКомментариевПроектаНазваниеФайла" id="210">
+									<DataPath>СписокКомментариевПроекта.НазваниеФайла</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКомментариевПроектаНазваниеФайлаКонтекстноеМеню" id="211"/>
+									<ExtendedTooltip name="СписокКомментариевПроектаНазваниеФайлаРасширеннаяПодсказка" id="212"/>
+								</InputField>
+								<InputField name="СписокКомментариевПроектаТипФайла" id="213">
+									<DataPath>СписокКомментариевПроекта.ТипФайла</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКомментариевПроектаТипФайлаКонтекстноеМеню" id="214"/>
+									<ExtendedTooltip name="СписокКомментариевПроектаТипФайлаРасширеннаяПодсказка" id="215"/>
+								</InputField>
+								<InputField name="СписокКомментариевПроектаСсылкаНаФайл" id="216">
+									<DataPath>СписокКомментариевПроекта.СсылкаНаФайл</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКомментариевПроектаСсылкаНаФайлКонтекстноеМеню" id="217"/>
+									<ExtendedTooltip name="СписокКомментариевПроектаСсылкаНаФайлРасширеннаяПодсказка" id="218"/>
+								</InputField>
+								<InputField name="СписокКомментариевПроектаТипСодержимого" id="219">
+									<DataPath>СписокКомментариевПроекта.ТипСодержимого</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКомментариевПроектаТипСодержимогоКонтекстноеМеню" id="220"/>
+									<ExtendedTooltip name="СписокКомментариевПроектаТипСодержимогоРасширеннаяПодсказка" id="221"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="ГруппаЗадачи" id="168">
@@ -163,7 +312,26 @@
 					<EnableDrag>true</EnableDrag>
 					<DataPath>СписокЗадач</DataPath>
 					<RowFilter xsi:nil="true"/>
-					<ContextMenu name="СписокЗадачКонтекстноеМеню" id="51"/>
+					<ContextMenu name="СписокЗадачКонтекстноеМеню" id="51">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="СписокЗадачКонтекстноеМенюСоздатьЗадачу" id="222">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.СоздатьЗадачу</CommandName>
+								<ExtendedTooltip name="СписокЗадачКонтекстноеМенюСоздатьЗадачуРасширеннаяПодсказка" id="223"/>
+							</Button>
+							<Button name="СписокЗадачКонтекстноеМенюИзменитьЗадачу" id="224">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ИзменитьЗадачу</CommandName>
+								<ExtendedTooltip name="СписокЗадачКонтекстноеМенюИзменитьЗадачуРасширеннаяПодсказка" id="225"/>
+							</Button>
+							<Button name="СписокЗадачКонтекстноеМенюУдалитьЗадачу" id="226">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.УдалитьЗадачу</CommandName>
+								<ExtendedTooltip name="СписокЗадачКонтекстноеМенюУдалитьЗадачуРасширеннаяПодсказка" id="227"/>
+							</Button>
+						</ChildItems>
+					</ContextMenu>
 					<AutoCommandBar name="СписокЗадачКоманднаяПанель" id="52">
 						<Autofill>false</Autofill>
 					</AutoCommandBar>
@@ -325,120 +493,138 @@
 						</InputField>
 					</ChildItems>
 				</Table>
-			</ChildItems>
-		</UsualGroup>
-		<UsualGroup name="ГруппаКомментарии" id="170">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Комментарии</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа комментарии</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Representation>StrongSeparation</Representation>
-			<ExtendedTooltip name="ГруппаКомментарииРасширеннаяПодсказка" id="171"/>
-			<ChildItems>
-				<Table name="СписокКомментариев" id="126">
-					<Representation>List</Representation>
-					<AutoInsertNewRow>true</AutoInsertNewRow>
-					<EnableStartDrag>true</EnableStartDrag>
-					<EnableDrag>true</EnableDrag>
-					<DataPath>СписокКомментариев</DataPath>
-					<RowFilter xsi:nil="true"/>
-					<ContextMenu name="СписокКомментариевКонтекстноеМеню" id="127"/>
-					<AutoCommandBar name="СписокКомментариевКоманднаяПанель" id="128">
-						<Autofill>false</Autofill>
-					</AutoCommandBar>
-					<ExtendedTooltip name="СписокКомментариевРасширеннаяПодсказка" id="129"/>
-					<SearchStringAddition name="СписокКомментариевСтрокаПоиска" id="130">
-						<AdditionSource>
-							<Item>СписокКомментариев</Item>
-							<Type>SearchStringRepresentation</Type>
-						</AdditionSource>
-						<ContextMenu name="СписокКомментариевСтрокаПоискаКонтекстноеМеню" id="131"/>
-						<ExtendedTooltip name="СписокКомментариевСтрокаПоискаРасширеннаяПодсказка" id="132"/>
-					</SearchStringAddition>
-					<ViewStatusAddition name="СписокКомментариевСостояниеПросмотра" id="133">
-						<AdditionSource>
-							<Item>СписокКомментариев</Item>
-							<Type>ViewStatusRepresentation</Type>
-						</AdditionSource>
-						<ContextMenu name="СписокКомментариевСостояниеПросмотраКонтекстноеМеню" id="134"/>
-						<ExtendedTooltip name="СписокКомментариевСостояниеПросмотраРасширеннаяПодсказка" id="135"/>
-					</ViewStatusAddition>
-					<SearchControlAddition name="СписокКомментариевУправлениеПоиском" id="136">
-						<AdditionSource>
-							<Item>СписокКомментариев</Item>
-							<Type>SearchControl</Type>
-						</AdditionSource>
-						<ContextMenu name="СписокКомментариевУправлениеПоискомКонтекстноеМеню" id="137"/>
-						<ExtendedTooltip name="СписокКомментариевУправлениеПоискомРасширеннаяПодсказка" id="138"/>
-					</SearchControlAddition>
-					<Events>
-						<Event name="BeforeDeleteRow">СписокКомментариевПередУдалением</Event>
-					</Events>
+				<UsualGroup name="ГруппаКомментарииЗадачи" id="178">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарии задачи</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа комментарии задачи</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаКомментарииЗадачиРасширеннаяПодсказка" id="179"/>
 					<ChildItems>
-						<InputField name="СписокКомментариевСодержание" id="139">
-							<DataPath>СписокКомментариев.Содержание</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="СписокКомментариевСодержаниеКонтекстноеМеню" id="140"/>
-							<ExtendedTooltip name="СписокКомментариевСодержаниеРасширеннаяПодсказка" id="141"/>
-						</InputField>
-						<InputField name="СписокКомментариевИдентификатор" id="142">
-							<DataPath>СписокКомментариев.Идентификатор</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="СписокКомментариевИдентификаторКонтекстноеМеню" id="143"/>
-							<ExtendedTooltip name="СписокКомментариевИдентификаторРасширеннаяПодсказка" id="144"/>
-						</InputField>
-						<InputField name="СписокКомментариевДатаВремяСоздания" id="145">
-							<DataPath>СписокКомментариев.ДатаВремяСоздания</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="СписокКомментариевДатаВремяСозданияКонтекстноеМеню" id="146"/>
-							<ExtendedTooltip name="СписокКомментариевДатаВремяСозданияРасширеннаяПодсказка" id="147"/>
-						</InputField>
-						<InputField name="СписокКомментариевИдентификаторПроекта" id="148">
-							<DataPath>СписокКомментариев.ИдентификаторПроекта</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="СписокКомментариевИдентификаторПроектаКонтекстноеМеню" id="149"/>
-							<ExtendedTooltip name="СписокКомментариевИдентификаторПроектаРасширеннаяПодсказка" id="150"/>
-						</InputField>
-						<InputField name="СписокКомментариевИдентификаторЗадачи" id="151">
-							<DataPath>СписокКомментариев.ИдентификаторЗадачи</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="СписокКомментариевИдентификаторЗадачиКонтекстноеМеню" id="152"/>
-							<ExtendedTooltip name="СписокКомментариевИдентификаторЗадачиРасширеннаяПодсказка" id="153"/>
-						</InputField>
-						<InputField name="СписокКомментариевНазваниеФайла" id="154">
-							<DataPath>СписокКомментариев.НазваниеФайла</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="СписокКомментариевНазваниеФайлаКонтекстноеМеню" id="155"/>
-							<ExtendedTooltip name="СписокКомментариевНазваниеФайлаРасширеннаяПодсказка" id="156"/>
-						</InputField>
-						<InputField name="СписокКомментариевТипФайла" id="157">
-							<DataPath>СписокКомментариев.ТипФайла</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="СписокКомментариевТипФайлаКонтекстноеМеню" id="158"/>
-							<ExtendedTooltip name="СписокКомментариевТипФайлаРасширеннаяПодсказка" id="159"/>
-						</InputField>
-						<InputField name="СписокКомментариевСсылкаНаФайл" id="160">
-							<DataPath>СписокКомментариев.СсылкаНаФайл</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="СписокКомментариевСсылкаНаФайлКонтекстноеМеню" id="161"/>
-							<ExtendedTooltip name="СписокКомментариевСсылкаНаФайлРасширеннаяПодсказка" id="162"/>
-						</InputField>
-						<InputField name="СписокКомментариевТипСодержимого" id="163">
-							<DataPath>СписокКомментариев.ТипСодержимого</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="СписокКомментариевТипСодержимогоКонтекстноеМеню" id="164"/>
-							<ExtendedTooltip name="СписокКомментариевТипСодержимогоРасширеннаяПодсказка" id="165"/>
-						</InputField>
+						<Table name="СписокКомментариевЗадачи" id="126">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>СписокКомментариевЗадачи</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СписокКомментариевЗадачиКонтекстноеМеню" id="127">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="СписокКомментариевЗадачиКонтекстноеМенюСоздатьКомментарийЗадачи" id="230">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СоздатьКомментарийЗадачи</CommandName>
+										<ExtendedTooltip name="СписокКомментариевЗадачиКонтекстноеМенюСоздатьКомментарийЗадачиРасширеннаяПодсказка" id="231"/>
+									</Button>
+									<Button name="СписокКомментариевЗадачиКонтекстноеМенюИзменитьКомментарийЗадачи" id="236">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ИзменитьКомментарийЗадачи</CommandName>
+										<ExtendedTooltip name="СписокКомментариевЗадачиКонтекстноеМенюИзменитьКомментарийЗадачиРасширеннаяПодсказка" id="237"/>
+									</Button>
+									<Button name="СписокКомментариевЗадачиКонтекстноеМенюУдалитьКомментарийЗадачи" id="238">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УдалитьКомментарийЗадачи</CommandName>
+										<ExtendedTooltip name="СписокКомментариевЗадачиКонтекстноеМенюУдалитьКомментарийЗадачиРасширеннаяПодсказка" id="239"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="СписокКомментариевЗадачиКоманднаяПанель" id="128">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокКомментариевЗадачиРасширеннаяПодсказка" id="129"/>
+							<SearchStringAddition name="СписокКомментариевЗадачиСтрокаПоиска" id="130">
+								<AdditionSource>
+									<Item>СписокКомментариевЗадачи</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокКомментариевЗадачиСтрокаПоискаКонтекстноеМеню" id="131"/>
+								<ExtendedTooltip name="СписокКомментариевЗадачиСтрокаПоискаРасширеннаяПодсказка" id="132"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокКомментариевЗадачиСостояниеПросмотра" id="133">
+								<AdditionSource>
+									<Item>СписокКомментариевЗадачи</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокКомментариевЗадачиСостояниеПросмотраКонтекстноеМеню" id="134"/>
+								<ExtendedTooltip name="СписокКомментариевЗадачиСостояниеПросмотраРасширеннаяПодсказка" id="135"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокКомментариевЗадачиУправлениеПоиском" id="136">
+								<AdditionSource>
+									<Item>СписокКомментариевЗадачи</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокКомментариевЗадачиУправлениеПоискомКонтекстноеМеню" id="137"/>
+								<ExtendedTooltip name="СписокКомментариевЗадачиУправлениеПоискомРасширеннаяПодсказка" id="138"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeDeleteRow">СписокКомментариевПередУдалением</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="СписокКомментариевСодержание" id="139">
+									<DataPath>СписокКомментариевЗадачи.Содержание</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКомментариевСодержаниеКонтекстноеМеню" id="140"/>
+									<ExtendedTooltip name="СписокКомментариевСодержаниеРасширеннаяПодсказка" id="141"/>
+								</InputField>
+								<InputField name="СписокКомментариевИдентификатор" id="142">
+									<DataPath>СписокКомментариевЗадачи.Идентификатор</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКомментариевИдентификаторКонтекстноеМеню" id="143"/>
+									<ExtendedTooltip name="СписокКомментариевИдентификаторРасширеннаяПодсказка" id="144"/>
+								</InputField>
+								<InputField name="СписокКомментариевДатаВремяСоздания" id="145">
+									<DataPath>СписокКомментариевЗадачи.ДатаВремяСоздания</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКомментариевДатаВремяСозданияКонтекстноеМеню" id="146"/>
+									<ExtendedTooltip name="СписокКомментариевДатаВремяСозданияРасширеннаяПодсказка" id="147"/>
+								</InputField>
+								<InputField name="СписокКомментариевИдентификаторПроекта" id="148">
+									<DataPath>СписокКомментариевЗадачи.ИдентификаторПроекта</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКомментариевИдентификаторПроектаКонтекстноеМеню" id="149"/>
+									<ExtendedTooltip name="СписокКомментариевИдентификаторПроектаРасширеннаяПодсказка" id="150"/>
+								</InputField>
+								<InputField name="СписокКомментариевИдентификаторЗадачи" id="151">
+									<DataPath>СписокКомментариевЗадачи.ИдентификаторЗадачи</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКомментариевИдентификаторЗадачиКонтекстноеМеню" id="152"/>
+									<ExtendedTooltip name="СписокКомментариевИдентификаторЗадачиРасширеннаяПодсказка" id="153"/>
+								</InputField>
+								<InputField name="СписокКомментариевНазваниеФайла" id="154">
+									<DataPath>СписокКомментариевЗадачи.НазваниеФайла</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКомментариевНазваниеФайлаКонтекстноеМеню" id="155"/>
+									<ExtendedTooltip name="СписокКомментариевНазваниеФайлаРасширеннаяПодсказка" id="156"/>
+								</InputField>
+								<InputField name="СписокКомментариевТипФайла" id="157">
+									<DataPath>СписокКомментариевЗадачи.ТипФайла</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКомментариевТипФайлаКонтекстноеМеню" id="158"/>
+									<ExtendedTooltip name="СписокКомментариевТипФайлаРасширеннаяПодсказка" id="159"/>
+								</InputField>
+								<InputField name="СписокКомментариевСсылкаНаФайл" id="160">
+									<DataPath>СписокКомментариевЗадачи.СсылкаНаФайл</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКомментариевСсылкаНаФайлКонтекстноеМеню" id="161"/>
+									<ExtendedTooltip name="СписокКомментариевСсылкаНаФайлРасширеннаяПодсказка" id="162"/>
+								</InputField>
+								<InputField name="СписокКомментариевТипСодержимого" id="163">
+									<DataPath>СписокКомментариевЗадачи.ТипСодержимого</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКомментариевТипСодержимогоКонтекстноеМеню" id="164"/>
+									<ExtendedTooltip name="СписокКомментариевТипСодержимогоРасширеннаяПодсказка" id="165"/>
+								</InputField>
+							</ChildItems>
+						</Table>
 					</ChildItems>
-				</Table>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>
@@ -589,11 +775,11 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="СпособОтображения" id="10">
+				<Column name="СпособОтображенияДоска" id="10">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Способ отображения</v8:content>
+							<v8:content>Способ отображения доска</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -964,11 +1150,159 @@
 				</Column>
 			</Columns>
 		</Attribute>
-		<Attribute name="СписокКомментариев" id="3">
+		<Attribute name="СписокКомментариевЗадачи" id="3">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Список комментариев</v8:content>
+					<v8:content>Список комментариев задачи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Содержание" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Содержание</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Идентификатор" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаВремяСоздания" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата время создания</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторПроекта" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор проекта</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторЗадачи" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор задачи</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НазваниеФайла" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Название файла</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТипФайла" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип файла</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СсылкаНаФайл" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка на файл</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТипСодержимого" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип содержимого</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СписокКомментариевПроекта" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список комментариев задачи</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1114,8 +1448,185 @@
 		</Attribute>
 	</Attributes>
 	<Commands>
-		<Command name="Команда1" id="1">
-			<Action>Команда1</Action>
+		<Command name="СоздатьПроект" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать проект</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать проект</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьПроект</Action>
+		</Command>
+		<Command name="УдалитьПроект" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить проект</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить проект</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьПроект</Action>
+		</Command>
+		<Command name="ПереименоватьПроект" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переименовать проект</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переименовать проект</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПереименоватьПроект</Action>
+		</Command>
+		<Command name="СоздатьЗадачу" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать задачу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать задачу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьЗадачу</Action>
+		</Command>
+		<Command name="ИзменитьЗадачу" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить задачу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить задачу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьЗадачу</Action>
+		</Command>
+		<Command name="УдалитьЗадачу" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить задачу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить задачу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьЗадачу</Action>
+		</Command>
+		<Command name="СоздатьКомментарийПроекта" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать комментарий проекта</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать комментарий проекта</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьКомментарийПроекта</Action>
+		</Command>
+		<Command name="СоздатьКомментарийЗадачи" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать комментарий задачи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать комментарий задачи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьКомментарийЗадачи</Action>
+		</Command>
+		<Command name="ИзменитьКомментарийПроекта" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить комментарий проекта</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить комментарий проекта</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьКомментарийПроекта</Action>
+		</Command>
+		<Command name="УдалитьКомментарийПроекта" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить комментарий проекта</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить комментарий проекта</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьКомментарийПроекта</Action>
+		</Command>
+		<Command name="ИзменитьКомментарийЗадачи" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить комментарий задачи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить комментарий задачи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьКомментарийЗадачи</Action>
+		</Command>
+		<Command name="УдалитьКомментарийЗадачи" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить комментарий задачи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить комментарий задачи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьКомментарийЗадачи</Action>
 		</Command>
 	</Commands>
 </Form>
