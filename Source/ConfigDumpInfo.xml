@@ -3,12 +3,12 @@
 	<ConfigVersions>
 		<Metadata name="CommonForm.Todoist_ФормаТестирования" id="d2f02d3e-5dd0-4c7d-8bef-14dcfe2b832f" configVersion="c8c1c9ca8f096a47852de4187f25e65b00000000"/>
 		<Metadata name="CommonForm.Todoist_ФормаТестирования.Form" id="d2f02d3e-5dd0-4c7d-8bef-14dcfe2b832f.0" configVersion="56ed1ab1ed3f4249b472010babef543000000000"/>
-		<Metadata name="CommonModule.Todoist_Клиент" id="82cc4f70-0fe0-4ec5-af23-027e3561742a" configVersion="477f40a2fcb66a47a1e71516aaf2ada000000000"/>
-		<Metadata name="CommonModule.Todoist_Клиент.Module" id="82cc4f70-0fe0-4ec5-af23-027e3561742a.0" configVersion="c82756174414d040864f1b823dec568d00000000"/>
-		<Metadata name="CommonModule.Todoist_Сервер" id="606630cb-344d-4665-8f53-20bc3a597094" configVersion="9f73a44e43cb1543bb7e457c53b1c71800000000"/>
-		<Metadata name="CommonModule.Todoist_Сервер.Module" id="606630cb-344d-4665-8f53-20bc3a597094.0" configVersion="a1441f309fcb8348b2aa5383c0cf917f00000000"/>
-		<Metadata name="Configuration.Конфигурация" id="5f954e35-3836-43a7-a82d-65c6de3a838a" configVersion="fad0a00e86deb74cb644a507e8e1750600000000"/>
-		<Metadata name="Configuration.Конфигурация.HomePageWorkArea" id="d576d3e1-54e6-45b7-9fc6-2b2b550a40e1.8" configVersion="bda87ef50d33954fa190226451832a3f00000000"/>
+		<Metadata name="CommonModule.Todoist_Клиент" id="82cc4f70-0fe0-4ec5-af23-027e3561742a" configVersion="0a45cf29d892d64ebf45e1e04707150d00000000"/>
+		<Metadata name="CommonModule.Todoist_Клиент.Module" id="82cc4f70-0fe0-4ec5-af23-027e3561742a.0" configVersion="64a16dfa3a0ff443b88ae18d01a1e8fd00000000"/>
+		<Metadata name="CommonModule.Todoist_Сервер" id="606630cb-344d-4665-8f53-20bc3a597094" configVersion="99d641ceb5eadb4cb34500f3711721b800000000"/>
+		<Metadata name="CommonModule.Todoist_Сервер.Module" id="606630cb-344d-4665-8f53-20bc3a597094.0" configVersion="b36be7f20b34fc4c9acfecb42819affc00000000"/>
+		<Metadata name="Configuration.Конфигурация" id="5f954e35-3836-43a7-a82d-65c6de3a838a" configVersion="ca90698628b6d44d9d0eedcb270e087800000000"/>
+		<Metadata name="Configuration.Конфигурация.HomePageWorkArea" id="d576d3e1-54e6-45b7-9fc6-2b2b550a40e1.8" configVersion="eb911e8a06211e4b9bbc35b463f8c87a00000000"/>
 		<Metadata name="Language.Русский" id="7e838126-0059-4f2b-a8ed-8807cb864c26" configVersion="23cce0b1efee3f44837088bfb5c83d3f00000000"/>
 	</ConfigVersions>
 </ConfigDumpInfo>
